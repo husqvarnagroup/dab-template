@@ -22,7 +22,7 @@ Initialize a new Databricks Asset Bundle project with our template.
 Replace `PROFILE_NAME` with the Databricks profile name you will use for developing and testing your project:
 
 ```sh
-databricks bundle init https://github.com/bulv1ne/dab-template --template-dir dab-project --profile PROFILE_NAME
+databricks bundle init https://github.com/husqvarnagroup/dab-template --template-dir dab-project --profile PROFILE_NAME
 ```
 
 This will create a new project with the following structure:
@@ -49,7 +49,7 @@ After creating your project, you should:
 Add a new Databricks job to your project:
 
 ```sh
-databricks bundle init https://github.com/bulv1ne/dab-template --template-dir dab-job --profile PROFILE_NAME
+databricks bundle init https://github.com/husqvarnagroup/dab-template --template-dir dab-job --profile PROFILE_NAME
 ```
 
 After creating a job, configure it by:
@@ -63,7 +63,7 @@ Add a new deployment target (environment) to your project as follows.
 Replace `TARGET_PROFILE_NAME` with the Databricks profile name for the target environment (e.g., production, staging):
 
 ```sh
-databricks bundle init https://github.com/bulv1ne/dab-template --template-dir dab-target --profile TARGET_PROFILE_NAME
+databricks bundle init https://github.com/husqvarnagroup/dab-template --template-dir dab-target --profile TARGET_PROFILE_NAME
 ```
 
 For each target added:
