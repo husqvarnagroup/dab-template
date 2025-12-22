@@ -45,7 +45,12 @@ resources:
       email_notifications:
         on_failure:
           - ${var.slack_channel_email}
-      {{- if not .use_serverless}}
+      {{- if .use_serverless}}
+        environments:
+         - environment_key: "default_python"
+           spec:
+            environment_version: "4"
+      {{- else}}
       job_clusters:
         - job_cluster_key: cluster
           new_cluster:
@@ -71,7 +76,9 @@ resources:
       tasks:
         {{- if .landingzone_to_raw}}
         - task_key: landingzone_to_raw
-          {{- if not .use_serverless}}
+          {{- if .use_serverless}}
+          environment_key: "default_python"
+          {{- else}}
           job_cluster_key: cluster
           {{- end}}
           max_retries: 2
@@ -88,7 +95,9 @@ resources:
           depends_on:
             - task_key: landingzone_to_raw
           {{- end}}
-          {{- if not .use_serverless}}
+          {{- if .use_serverless}}
+          environment_key: "default_python"
+          {{- else}}
           job_cluster_key: cluster
           {{- end}}
           max_retries: 2
