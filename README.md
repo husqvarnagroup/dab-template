@@ -1,12 +1,12 @@
 # dab-templates
 
-A collection of Databricks Asset Bundle (DAB) templates for streamlining development of Databricks projects with automated deployment via Azure Pipelines.
+A collection of Declarative Automation Bundle (DAB) templates for streamlining development of Databricks projects with automated deployment via Azure Pipelines.
 
 ## Overview
 
 This repository contains the following templates:
 
-- **dab-project**: Base template for creating a new Databricks Asset Bundle project with Azure Pipelines integration
+- **dab-project**: Base template for creating a new Declarative Automation Bundle project with Azure Pipelines integration
 - **dab-target**: Template for adding new deployment targets (environments) to your project
 - **dab-job**: Template for adding new Databricks jobs to your project
 
@@ -18,7 +18,7 @@ This repository contains the following templates:
 
 ### Creating a Project
 
-Initialize a new Databricks Asset Bundle project with our template.
+Initialize a new Declarative Automation Bundle project with our template.
 Replace `PROFILE_NAME` with the Databricks profile name you will use for developing and testing your project:
 
 ```sh
@@ -87,7 +87,7 @@ For each target added:
 
 The templates include Azure Pipelines configurations that will:
 
-1. Validate your Databricks Asset Bundle
+1. Validate your Declarative Automation Bundle
 2. Deploy your bundle to the specified targets when merging to the main branch
 
 ### Useful Commands
@@ -110,5 +110,5 @@ databricks bundle deploy -t <target>
 
 We welcome contributions! Please open an issue or submit a pull request if you have suggestions or improvements.
 
-For more information about Databricks Asset Bundle templates, see the official documentation:
+For more information about Declarative Automation Bundle templates, see the official documentation:
 <https://docs.databricks.com/aws/en/dev-tools/bundles/templates>

@@ -11,14 +11,14 @@ variables:
 # DATABRICKS_CLIENT_SECRET
 
 stages:
-  - stage: DatabricksAssetBundleValidation
+  - stage: DeclarativeAutomationBundleValidation
     jobs:
       - job: JobDeploymentPlan
         strategy:
           matrix:  # Add your targets here
             prod_<environment>:  # Replace with your environment name
               target: 'prod_<environment>'
-        displayName: Databricks Asset Bundle deployment for $(target)
+        displayName: Declarative Automation Bundle deployment for $(target)
         pool:
           vmImage: 'ubuntu-latest'
         steps:
